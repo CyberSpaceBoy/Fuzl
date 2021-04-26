@@ -37,7 +37,7 @@ class collision:
       return False
 def move(x,toX,block):
   magnitude = complexio.gravity.fall_stats(math.floor(x),0,math.floor(toX),0)
-  return ' ' + block * magnitude 
+  return ' ' * magnitude + block 
 def glide(x,toX,block):
   magnitude = int(complexio.gravity.fall_stats(math.floor(x),0,math.floor(toX),0)['X Magnitude'])
   cutscene = []
@@ -60,4 +60,4 @@ def calc_y(block):
   return mag 
 
 #(C)Vertock Softwares Company 2  
-# 2021, Version 1.0.0
+# 2021, Version 1.0.0.1
