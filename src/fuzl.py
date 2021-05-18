@@ -4,7 +4,9 @@ import math
 import complexio
 from replit import audio
 from getch import getch
+from time import sleep
 blocks = []
+def clr():os.system('clear')
 def play_sound(file):
   audio.play_file(file) 
 def add_block(raw,color=Fore.RESET,background=Back.RESET,style=Style.NORMAL):
@@ -58,6 +60,15 @@ def calc_y(block):
   for newline in block:
     mag += 1 
   return mag 
-
+def fall(block,tm,fall):
+ while fall > 0:
+   block = "\n"+block+"\033[A"
+   print(block)
+   sleep(tm)
+   fall-=1
+   clr() 
+plr = "X"
+x = 0
+y = 0  
 #(C)Vertock Softwares Company 2  
-# 2021, Version 1.0.0.1
+# 2021, Version 1.0.0.5
